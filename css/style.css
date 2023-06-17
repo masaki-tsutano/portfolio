@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+/*==================== COMMON ====================*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FCFCFC;
+  letter-spacing: .05em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/*==================== LAYOUT ====================*/
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*==================== LAYOUT - MOBILE ====================*/
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+/*==================== HEADER ====================*/
+#header {
+  width: 100%;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  z-index: 10;
+}
+
+#header .nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .nav .nav_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#header .nav .nav_item {
+  padding-left: 30px;
+}
+
+#header .nav .nav_item a {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  color: #A9A9A9;
+}
+
+#header .nav .nav_item a:hover {
+  color: #DFDFDF;
+}
+
+#header .nav .nav_item a:hover {
+  opacity: .7;
+}
+
+#header .nav  .nav_item i {
+  font-size: 16px;
+  color: rgb(30, 48, 80);
+}
+
+/*==================== HEADER - MOBILE ====================*/
+@media (max-width: 768px) {
+  #header {
+    top: 20px;
+  }
+
+  #header .nav .nav_item a:hover {
+    color: #A9A9A9;
+  }
+}
+
+/*==================== LOGO ====================*/
+#logo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  transform: translateY(-5%);
+  text-align: center;
+}
+
+#logo h1 {
+  display: block;
+}
+
+#logo h1 a {
+  color: #333;
+}
+
+#logo span {
+  font-size: 5px;
+  letter-spacing: 0.09em;
+  color: #A9A9A9;
+  display: block;
+  padding-bottom: 4px;
+}
+
+/*==================== LOGO - MOBILE ====================*/
+@media (max-width: 768px) {
+  #logo {
+    height: 80vh;
+    padding: 0;
+  }
+
+  #logo h1 {
+    font-size: 1.25em;
+    padding-top: 10px;
+  }
+}
+
+/*==================== WORKS ====================*/
+#works {
+  background-color: #F4F4F4;
+}
+
+#works,
+#about {
+  padding-bottom: 100px;
+}
+
+#works h2,
+#about h2,
+#skill h2 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  letter-spacing: 0.05em;
+}
+
+#works ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  height: 500px;
+}
+
+#works li p {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+#works img:hover {
+  opacity: .7;
+}
+
+/*==================== WORKS - MOBILE ====================*/
+@media (max-width: 768px) {
+  #works,
+  #about,
+  #skill {
+    padding-bottom: 50px;
+  }
+
+  #works h2,
+  #about h2,
+  #skill h2 {
+    font-size: 22px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  #works ul {
+    gap: 20px;
+    height: auto;
+  }
+
+  #works li {
+    margin-bottom: 24px;
+  }
+
+  #works li p {
+    padding-top: 20px;
+  }
+
+  #works img {
+    width: 100%;
+  }
+}
+
+/*==================== ABOUT ====================*/
+#about {
+  background-color: #FCFCFC;
+}
+
+#about .about_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about .about_list,
+#skill .skill_list {
+  padding: 20px;
+}
+
+#about .about_item {
+  width: 48%;
+}
+
+#about .about_item img {
+  width: 100%;
+}
+
+#about .about_item .text_box {
+  position: relative;
+  padding: 20px;
+}
+
+#about .about_item .text_box .name,
+#about .about_item .text_box .place,
+#about .about_item .text_box .birthday {
+  border-left: 4px solid #333;
+  padding-left: 16px;
+}
+
+#about .about_item .text_box .place {
+  margin: 16px 0;
+}
+
+#about .about_item .text_box .birthday {
+  margin-bottom: 20px;
+}
+
+#about .about_item .text_box p {
+  letter-spacing: .05em;
+  line-height: 1.7;
+}
+
+/*==================== ABOUT - MOBILE ====================*/
+@media (max-width: 768px) {
+  #about .about_list,
+  #skill .skill_list {
+    padding: 10px;
+  }
+
+  #about .about_item {
+    width: 49%;
+  }
+
+  #about .about_item .text_box {
+    padding: 10px;
+  }
+
+  #about .about_item .text_box p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/*==================== SKILL ====================*/
+#skill {
+  background-color: #F4F4F4;
+  letter-spacing: .05em;
+}
+
+#skill .skill_list .skill_title {
+  font-size: 20px;
+}
+
+#skill .skill_list .skill_description {
+  padding-top: 8px;
+  text-indent: 1em;
+}
+
+#skill .skill_list li + li {
+  margin-top: 30px;
+}
+
+/*==================== SKILL - MOBILE ====================*/
+@media (max-width: 768px) {
+  #skill {
+    padding-bottom: 50px;
+  }
+
+  #skill .skill_list .skill_title {
+    font-size: 18px;
+  }
+
+  #skill .skill_list .skill_description {
+    font-size: 15px;
+  }
+
+  #skill .skill_list li + li {
+    margin-top: 25px;
+  }
+}
+
+/*==================== FOOTER ====================*/
+#footer {
+  background-color: #DFDFDF;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding: 40px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+/*==================== FOOTER - MOBILE ====================*/
+@media (max-width: 768px) {
+  #footer .copyright {
+    padding: 30px;
+  }
+}
