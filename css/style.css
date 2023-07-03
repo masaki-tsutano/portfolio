@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
 /*==================== COMMON ====================*/
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FCFCFC;
@@ -19,7 +15,6 @@ body {
 a {
   text-decoration: none;
 }
-
 
 li {
   list-style: none;
@@ -47,8 +42,8 @@ img {
 /*==================== HEADER ====================*/
 #header {
   width: 100%;
+  padding: 20px 0;
   position: fixed;
-  top: 10px;
   right: 0;
   z-index: 10;
 }
@@ -83,19 +78,21 @@ img {
   opacity: .7;
 }
 
-#header .nav  .nav_item i {
+#header .nav .nav_item i {
   font-size: 16px;
   color: rgb(30, 48, 80);
 }
 
 /*==================== HEADER - TABLET ====================*/
 @media (max-width: 768px) {
-  #header {
-    top: 20px;
-  }
-
   #header .nav .nav_item a:hover {
     color: #A9A9A9;
+  }
+
+  .header-active {
+    height: 30px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 5%);
   }
 }
 
