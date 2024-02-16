@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
 /*==================== COMMON ====================*/
+html {
+  font-size: 100%;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   background-color: #FCFCFC;
   letter-spacing: .05em;
+  color: #333;
 }
 
 * {
@@ -21,21 +26,31 @@ li {
 }
 
 img {
+  display: block;
   max-width: 100%;
-  vertical-align: bottom;
+  height: auto;
 }
 
 /*==================== LAYOUT ====================*/
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 /*==================== LAYOUT - TABLET ====================*/
 @media (max-width: 768px) {
   .wrapper {
     width: 90%;
-    margin: 0 5%;
+  }
+}
+
+/*==================== LAYOUT - MOBILE ====================*/
+@media (max-width: 425px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -46,6 +61,12 @@ img {
   position: fixed;
   right: 0;
   z-index: 10;
+}
+
+.header-active {
+  height: 30px;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0 3px 6px rgb(0 0 0 / 5%);
 }
 
 #header .nav {
@@ -162,10 +183,12 @@ img {
 }
 
 #works ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 50px;
-  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#works li {
+  width: calc(100% / 3 - 30px);
 }
 
 #works li p {
@@ -178,6 +201,13 @@ img {
 
 #works img:hover {
   opacity: .7;
+}
+
+.fig {
+  width: fit-content;
+  margin-inline: auto;
+  color: #333;
+  padding-top: 12px;
 }
 
 /*==================== WORKS - TABLET ====================*/
@@ -197,12 +227,19 @@ img {
   }
 
   #works ul {
-    gap: 20px;
-    height: auto;
+    flex-direction: column;
+    gap: 40px;
   }
 
   #works li {
+    width: 100%;
     margin-bottom: 24px;
+    margin-inline: auto;
+    padding: 0 8px;
+  }
+
+  #works .works_item_img {
+    margin-inline: auto;
   }
 
   #works li p {
@@ -210,12 +247,12 @@ img {
     padding-top: 20px;
   }
 
-  #works img {
-    width: 100%;
+  .fig {
+    padding-top: 24px;
   }
 }
 
-/*==================== LOGO - MOBILE ====================*/
+/*==================== WORKS - MOBILE ====================*/
 @media (max-width: 425px) {
   #works,
   #about,
@@ -227,12 +264,18 @@ img {
   #about h2,
   #skill h2 {
     font-size: 20px;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  #works ul {
+    gap: 40px;
   }
 
   #works li {
+    width: 100%;
     margin-bottom: 10px;
+    padding: 0;
   }
 }
 
@@ -253,10 +296,6 @@ img {
 
 #about .about_item {
   width: 48%;
-}
-
-#about .about_item img {
-  width: 100%;
 }
 
 #about .about_item .text_box {
@@ -302,10 +341,22 @@ img {
 
   #about .about_item .text_box p {
     font-size: 15px;
-    line-height: 1.5;
   }
 }
 
+@media (max-width: 660px) {
+  #about .about_list {
+    flex-direction: column;
+  }
+
+  #about .about_item {
+    margin-inline: auto;
+  }
+
+  #about .about_item:nth-child(2) {
+    padding-top: 24px;
+  }
+}
 /*==================== ABOUT - MOBILE ====================*/
 @media (max-width: 425px) {
   #about .about_list,
@@ -323,6 +374,10 @@ img {
 
   #about .about_item:nth-child(2) {
     margin-top: 20px;
+  }
+
+  #about .about_item_img {
+    margin-inline: auto;
   }
 
   #about .about_item .text_box {
@@ -364,7 +419,7 @@ img {
   }
 }
 
-/*==================== ABOUT - MOBILE ====================*/
+/*==================== SKILL - MOBILE ====================*/
 @media (max-width: 425px) {
   #skill .skill_list .skill_title {
     font-size: 16px;
@@ -373,28 +428,6 @@ img {
   #skill .skill_list li + li {
     margin-top: 20px;
   }
-}
-
-/*==================== CONTACT ====================*/
-#contact .contact_icon {
-  text-align: center;
-}
-
-#contact a {
-  color: #333;
-  display: inline-block;
-}
-
-#contact .fa-envelope {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #DFDFDF;
-  border-radius: 50%;
 }
 
 /*==================== FOOTER ====================*/
@@ -422,4 +455,20 @@ img {
     font-size: 11px;
     padding: 24px;
   }
+}
+
+/*==================== 下層ページ共通設定 ====================*/
+.main {
+  padding-top: 100px;
+}
+.section {
+  max-width: 860px;
+  margin-inline: auto;
+  padding-bottom: 100px;
+}
+
+.desc {
+  color: #333;
+  padding: 24px 12px 0;
+  line-height: 1.7;
 }
