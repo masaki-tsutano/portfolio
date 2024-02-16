@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
   <!-- Font Awesome CDN Link -->
   <script src="https://kit.fontawesome.com/a806ddd0ce.js" crossorigin="anonymous"></script>
@@ -17,7 +19,6 @@
 
   <title>MASAKI TSUTANO</title>
 </head>
-
 <body>
   <!-- #header -->
   <header id="header">
@@ -29,7 +30,7 @@
           <li class="nav_item"><a href="#about">ABOUT</a></li>
           <li class="nav_item"><a href="#skill">SKILL</a></li>
           <li class="nav_item">
-            <a href="https://github.com/masaki-tsutano/portfolio.git" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/masaki-tsutano/portfolio.git" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
           </li>
         </ul>
       </div>
@@ -54,34 +55,28 @@
       <h2>WORKS</h2>
       <ul class="works_list">
         <li class="works_item">
-          <a href="fitness-gym.html">
-            <img src="https://masaki-tsutano.github.io/portfolio/img/work01.jpg" alt="FITNESS-GYM">
+          <a href="https://masaki-tsutano.github.io/portfolio/onsen.html">
+            <figure>
+              <img class="works_item_img" src="https://masaki-tsutano.github.io/portfolio/img/work03.jpg" width="301" height="242" decoding="async" alt="">
+              <figcaption class="fig">温泉旅館</figcaption>
+            </figure>
           </a>
-          <p>FITNESS GYM</p>
         </li>
         <li class="works_item">
-          <a href="coffee-shop.html">
-            <img src="https://masaki-tsutano.github.io/portfolio/img/work02.jpg" alt="COFFEE-SHOP">
+          <a href="https://masaki-tsutano.github.io/portfolio/company.html">
+            <figure>
+              <img class="works_item_img" src="https://masaki-tsutano.github.io/portfolio/img/work02.jpg" width="301" height="242" decoding="async" alt="">
+              <figcaption class="fig">UNIQUE ONE</figcaption>
+            </figure>
           </a>
-          <p>COFFEE SHOP</p>
         </li>
         <li class="works_item">
-          <a href="lawyer-office.html">
-            <img src="https://masaki-tsutano.github.io/portfolio/img/work03.jpg" alt="法律事務所">
+          <a href="https://masaki-tsutano.github.io/portfolio/farm.html">
+            <figure>
+              <img class="works_item_img" src="https://masaki-tsutano.github.io/portfolio/img/work01.jpg" width="301" height="242" decoding="async" alt="">
+              <figcaption class="fig">あいち野菜農園</figcaption>
+            </figure>
           </a>
-          <p>法律事務所</p>
-        </li>
-        <li class="works_item">
-          <a href="bridal-ring.html">
-            <img src="https://masaki-tsutano.github.io/portfolio/img/work04.jpg" alt="Bridal-ring">
-          </a>
-          <p>Bridal Ring</p>
-        </li>
-        <li class="works_item">
-          <a href="credit-card.html">
-            <img src="https://masaki-tsutano.github.io/portfolio/img/work05.jpg" alt="CREDIT-CARD">
-          </a>
-          <p>CREDIT CARD</p>
         </li>
       </ul>
     </div>
@@ -94,19 +89,17 @@
       <h2>ABOUT</h2>
       <ul class="about_list">
         <li class="about_item">
-          <img src="https://masaki-tsutano.github.io/portfolio/img/about-img.jpg" alt="">
+          <figure>
+            <img class="about_item_img" src="https://masaki-tsutano.github.io/portfolio/img/about-img.jpg" width="353" height="494" loading="lazy" decoding="async" alt="">
+          </figure>
         </li>
         <li class="about_item">
           <div class="text_box">
             <p class="name">蔦野昌樹（つたのまさき）</p>
-            <p class="place">愛知県在住</p>
-            <p class="birthday">1970年9月13日</p>
-            <p class="description">わたしの強みはひとりで黙々と作業ができることです。<br>
-              web制作を始めて3年経ち、毎日少しずつ学習を続けてきました。</p><br>
-            <p class="description">学習するなかで、なかなかうまいこといかずに途中何度もくじけそうになりました。<br>
-              ですが、いまではあきらめずに続けてよかったと思います。</p><br>
-            <p class="description">いままで勉強してきたなかで学んだことは、毎日少しずつでも努力を続けることが必要だと感じました。<br>
-              これからもお客さまの要望に応えるため、日々スキルアップの向上に努めます。</p>
+            <p class="description">フリーランスのウェブデザイナーです。</p><br>
+            <p class="description">これまで学んできたHTML、CSS、JavaScriptの知識や経験を活かし、正しい文法でコーディングすることが可能です。</p><br>
+            <p class="description">また、Chatwork、GitHub、Notion、Slackなどのツールを使い、円滑なコミュニケーションを図ることができます。</p><br>
+            <p class="description">私のスキルと経験を活かして、クライアントのビジネスをサポートします。</p>
           </div>
         </li>
       </ul>
@@ -127,14 +120,6 @@
           <h3 class="skill_title">JavaScript</h3>
           <p class="skill_description">ハンバーガーメニューやモーダルウィンドウなどの頻出するパーツや、ライブラリの実装はできます。複雑なコードを書くことはできません。</p>
           </li>
-        <li class="skill_item">
-          <h3 class="skill_title">Photoshop</h3>
-          <p class="skill_description">勉強中です。</p>
-        </li>
-        <li class="skill_item">
-          <h3 class="skill_title">Illustrator</h3>
-          <p class="skill_description">勉強中です。</p>
-        </li>
       </ul>
     </div>
   </section>
